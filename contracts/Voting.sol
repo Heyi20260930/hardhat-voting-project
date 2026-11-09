@@ -1,10 +1,10 @@
-
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.34;
 
-constract Voting {
+contract Voting {
     // 1. 使用 mapping 存储候选人的得票数
     // key 是候选人的名字 (string)，value 是得票数 (uint256)
-    mapping(address=>uint256) public votes;
+    mapping(string=>uint256) public votes;
 
     // 额外增加：记录已经投过票的地址，防止重复投票
     mapping(address=>bool) public hasVoted;
