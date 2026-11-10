@@ -1,57 +1,28 @@
-# Sample Hardhat 3 Project (`mocha` and `ethers`)
+# Web3 智能合约学习与实践 (Hardhat 3)
 
-This project showcases a Hardhat 3 project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+这是我的 Web3 智能合约练习仓库，基于 **Hardhat 3** 和 **TypeScript** 构建。主要记录了我在学习 Solidity 和智能合约开发过程中的算法练习与实战项目。
 
-To learn more about Hardhat 3, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3](https://hardhat.org/hardhat3-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+## 📂 项目结构
 
-## Project Overview
+- `contracts/`: 存放所有的 Solidity 智能合约代码。
+- `test/`: 存放所有的 TypeScript 测试用例（使用 Mocha + Chai）。
+- `ignition/`: 部署脚本模块。
 
-This example project includes:
+## 💡 已完成的合约与算法
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+目前本项目包含以下练习：
 
-## Usage
+1. **Voting (投票合约)**: 实现了候选人得票数统计、防重复投票限制、事件通知以及票数重置功能。
+2. **ReverseString (反转字符串)**: 使用底层 `bytes` 数组操作实现字符串反转。
+3. **RomanNumeral (整数转罗马数字)**: 使用贪心算法实现数字到罗马数字的转换。
+4. **RomanToInt (罗马数字转整数)**: 遍历字符并判断左右减规则，实现逆向转换。
+5. **MergeSortedArray (合并有序数组)**: 使用双指针算法高效合并两个有序数组。
+6. **BinarySearch (二分查找)**: 在有序数组中查找目标值，包含防溢出处理。
 
-### Running Tests
+## 🚀 快速开始
 
-To run all the tests in the project, execute the following command:
+如果你想在本地运行这些测试，请按照以下步骤操作：
 
-```shell
-npx hardhat test
-```
-
-You can also selectively run the Solidity or `mocha` tests:
-
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
-```
-
-### Make a deployment to Sepolia
-
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
-
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
-
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
-
-After setting the variable, you can run the deployment with the Sepolia network:
-
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+1. 安装依赖：
+   ```bash
+   npm install
